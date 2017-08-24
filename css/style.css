@@ -1,0 +1,24 @@
+/*Home page*/
+.imageanddescription{}
+.imageanddescription h1{}
+.imageanddescription p{}
+/*Skills Page*/
+.skillcontainer h1 {
+    margin: 1em 0em;
+    padding: 1em 0em;
+    font-size: 60px;
+    font-style: italic;
+    border-bottom: 5px solid black;
+}
+.cv_area img{max-width:192px}
+.cv{margin-bottom:1em  }
+/*Projects Page*/
+.h1styler{margin: 1em 0em;
+    padding: 1em 0em;
+    font-size: 60px;
+    font-style: italic;
+    border-bottom: 5px solid black;}
+.imagewithdescription{}
+.imagewithdescription h2{}
+.imagewithdescription img{}
+.imagewithdescription 
