@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse " role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+<!--container for the image and description area-->
+<div class="container">
+    <div class="row">
+        <div class="diy-slideshow">
+            <figure class="show">
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/snowying.jpg" width="100%" /><figcaption>"Snowying" by <a href="http://www.flickr.com/photos/fiddleoak/8511209344/">fiddleoak</a>.</figcaption>
+            </figure>
+            <figure>
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/starlight.jpg" width="100%" /><figcaption>"Starlight" by <a href="http://www.flickr.com/photos/chaoticmind75/10738494123/in/set-72157626146319517">ChaoticMind75</a>.</figcaption>
+            </figure>
+            <figure>
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/snowstorm.jpg" width="100%" /><figcaption>"Snowstorm" by <a href="http://www.flickr.com/photos/tylerbeaulawrence/8539457508/">Beaulawrence</a>.</figcaption>
+            </figure>
+            <figure>
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/misty-winter-afternoon.jpg" width="100%" /><figcaption>"Misty winter afternoon" by <a href="http://www.flickr.com/photos/22746515@N02/5277611659/">Bert Kaufmann</a>.</figcaption>
+            </figure>
+            <figure>
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/good-morning.jpg" width="100%" /><figcaption>"Good Morning!" by <a href="http://www.flickr.com/photos/frank_wuestefeld/4306107546/">Frank Wuestefeld</a>.</figcaption>
+            </figure>
+            <figure>
+                <img src="http://themarklee.com/wp-content/uploads/2013/12/driving-home-for-christmas.jpg" width="100%" /><figcaption>"Driving home for Christmas" by <a href="http://www.flickr.com/photos/22746515@N02/5292186041/">Bert Kaufmann</a>.</figcaption>
+            </figure>
+            <span class="prev">&laquo;</span>
+            <span class="next">&raquo;</span>
+        </div>
+
+        <p>An example of a pretty basic diy slideshow. This is the no-jQuery version.</p>
+    </div>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    (function(){
+
+        var counter = 0, // to keep track of current slide
+            $items = document.querySelectorAll('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+            numItems = $items.length; // total number of slides
+
+// this function is what cycles the slides, showing the next or previous slide and hiding all the others
+        var showCurrent = function(){
+            var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show
+
+            // remove .show from whichever element currently has it
+            // http://stackoverflow.com/a/16053538/2006057
+            [].forEach.call( $items, function(el){
+                el.classList.remove('show');
+            });
+
+            // add .show to the one item that's supposed to have it
+            $items[itemToShow].classList.add('show');
+        };
+
+// add click events to prev & next buttons
+        document.querySelector('.next').addEventListener('click', function() {
+            counter++;
+            showCurrent();
+        }, false);
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            counter--;
+            showCurrent();
+        }, false);
+
+    })();
+</script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

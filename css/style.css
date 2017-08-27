@@ -12,13 +12,126 @@
 }
 .cv_area img{max-width:192px}
 .cv{margin-bottom:1em  }
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#img-upload{
+    width: 100%;
+}
 /*Projects Page*/
 .h1styler{margin: 1em 0em;
     padding: 1em 0em;
     font-size: 60px;
     font-style: italic;
     border-bottom: 5px solid black;}
-.imagewithdescription{}
-.imagewithdescription h2{}
-.imagewithdescription img{}
-.imagewithdescription 
+.imagewithdescription{
+    box-shadow: 3px 3px 14px;
+    margin-bottom: 7em;
+}
+.imagewithdescription h2{margin: 1em 0em;
+    font-family: monospace;}
+.imagewithdescription img{margin-bottom: 3em;}
+.imagewithdescription p{    font-family: monospace;
+    margin-bottom: 4em;}
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+/*Photos*/
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    height: 100%;
+}
+.diy-slideshow{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+figure{
+    position: absolute;
+    opacity: 0;
+    transition: 1s opacity;
+}
+figcaption{
+    position: absolute;
+    font-family: sans-serif;
+    font-size: .8em;
+    bottom: .75em;
+    right: .35em;
+    padding: .25em;
+    color: #fff;
+    background: rgba(0,0,0, .25);
+    border-radius: 2px;
+}
+figcaption a{
+    color: #fff;
+}
+figure.show{
+    opacity: 1;
+    position: static;
+    transition: 1s opacity;
+}
+.next, .prev{
+    color: #fff;
+    position: absolute;
+    background: rgba(0,0,0, .6);
+    top: 50%;
+    z-index: 1;
+    font-size: 2em;
+    margin-top: -.75em;
+    opacity: .3;
+    user-select: none;
+}
+.next:hover, .prev:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.next{
+    right: 0;
+    padding: 10px 5px 15px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.prev{
+    left: 0;
+    padding: 10px 10px 15px 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+p{
+    margin: 10px 20px;
+    color: #fff;
+}

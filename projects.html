@@ -48,29 +48,77 @@
 <div class="container ">
 <div class="row">
 <h1 class="text-center h1styler">My Projects</h1>
-    <div class="imagewithdescription col-lg-12 text-center">
+    <div class="imagewithdescription col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center" id="project1">
         <h2>Project one</h2>
         <img src="img/japanese_beauty.jpeg" alt="japanese Beauty">
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
     </div>
-    <div class="imagewithdescription col-lg-12 text-center">
+    <div class="imagewithdescription col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center project2" id="project2">
         <h2>Project one</h2>
         <img src="img/japanese_beauty.jpeg" alt="japanese Beauty">
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
     </div>
-    <div class="imagewithdescription col-lg-12 text-center">
+    <div class="imagewithdescription col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8 text-center project3" id="project3">
         <h2>Project one</h2>
         <img src="img/japanese_beauty.jpeg" alt="japanese Beauty">
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
     </div>
 </div>
 </div>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"  id="onload">
+
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title"><i class="fa fa-exclamation-circle"></i>Hey this is a modal</h4>
+            </div>
+            <div class="modal-body">
+               Hello!Thanks for coming here.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery-1.10.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+//On load
+$(window).load(function(){
+    $('#onload').modal('show');
+});
+//on mouseover
+$('#project1').mouseover(function(){
+    alert("My First project");
+});
+//scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Chrome, Safari and Opera
+    document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+</script>
 </body>
 </html>
